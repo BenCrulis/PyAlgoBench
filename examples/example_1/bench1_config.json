@@ -1,0 +1,43 @@
+{
+    "output_folder_path": "./bench_results",
+    "benchmark_author": "ben",
+    "default_file_name": "test1",
+    "include_timestamp_in_name": false,
+    
+    "source_folder": ".",
+    "functions_source": [
+        {
+            "module_name": "module1",
+            "file_path": "to_be_tested.py",
+            "algorithms_name": ["function1", "function2"],
+            "stop_predicates_name": ["predicate1"]
+        },
+        {
+            "module_name": "module2",
+            "file_path": "to_be_tested2.py",
+            "algorithms_name": ["function1"]
+        }
+    ],
+    
+    "benchmark_configs": [
+        {
+            "output_file_name": "test1",
+            "functions": ["module1.function1", "function2"],
+            "stop_predicates": "predicate1",
+            "max_iter": 5000000,
+            "number_of_runs": 3,
+            "algorithm_config": {
+                "param1": 1,
+                "param2": ["value 1", "value 2"],
+                "param3": {
+                    "type": "range",
+                    "start": 2,
+                    "end": 20,
+                    "step": 10
+                }
+            }
+        }
+    ]
+
+
+}

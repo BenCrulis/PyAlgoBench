@@ -56,12 +56,12 @@ def test_single_config(runConfig):
     """
     finalConfig = {}
     finalConfig.update(runConfig.algorithm_config)
-    finalConfig.update({"predicate": runConfig.algorithm_function})
+    finalConfig.update({"function": runConfig.algorithm_function})
     finalConfig.update({"stop_predicate": runConfig.stop_predicate})
     finalConfig.update({"runNumber": range(1,runConfig.number_of_runs+1)})
     finalConfig.update({"max_iter": runConfig.max_iter})
-    finalConfig.update({"config_start_timestamp": time.time()})
-    finalConfig.update({"authors": [runConfig.authors]})
+    #finalConfig.update({"config_start_timestamp": time.time()})
+    #finalConfig.update({"authors": [runConfig.authors]})
     
     print(finalConfig)
     
@@ -84,9 +84,7 @@ testConf = RunConfig("test config",
 test_single_config(testConf)
 
 
-
-
-
+__import__("/home/ben/Documents/git/test.py", fromlist=[''])
 
 
 
